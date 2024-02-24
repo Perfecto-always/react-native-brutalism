@@ -1,0 +1,25 @@
+{
+    "name": "react-native-brutalism",
+    "version": "0.0.1",
+    "description": "Brutalism inspired library",
+    "react-native": "js/index",
+    "source": "js/index",
+    "files": [
+      "js",
+      "android",
+      "ios",
+      "!android/build",
+      "!ios/build"
+    ],
+    "keywords": ["react-native", "ios", "android"],
+    "devDependencies": {},
+    "peerDependencies": {
+      "react": "*",
+      "react-native": "*"
+    },
+    "codegenConfig": {
+      "name": "RNBrutalismViewSpecs",
+      "type": "components",
+      "jsSrcsDir": "js"
+    }
+  }
