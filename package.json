@@ -1,25 +1,41 @@
 {
-    "name": "react-native-brutalism",
-    "version": "0.0.1",
-    "description": "Brutalism inspired library",
-    "react-native": "js/index",
-    "source": "js/index",
-    "files": [
-      "js",
-      "android",
-      "ios",
-      "!android/build",
-      "!ios/build"
-    ],
-    "keywords": ["react-native", "ios", "android"],
-    "devDependencies": {},
-    "peerDependencies": {
-      "react": "*",
-      "react-native": "*"
-    },
-    "codegenConfig": {
-      "name": "RNBrutalismViewSpecs",
-      "type": "components",
-      "jsSrcsDir": "js"
-    }
+  "name": "react-native-brutalism",
+  "version": "1.0.0",
+  "description": "Brutalism inspired library",
+  "react-native": "src/index",
+  "source": "src/index",
+  "files": [
+    "js",
+    "lib",
+    "android",
+    "ios",
+    "cpp",
+    "react-native-pager-view.podspec",
+    "!lib/typescript/example",
+    "!android/build",
+    "!ios/build",
+    "!**/__tests__",
+    "!**/__fixtures__",
+    "!**/__mocks__"
+  ],
+  "keywords": [
+    "react-native",
+    "ios",
+    "android"
+  ],
+  "devDependencies": {
+    "react": "18.2.0",
+    "react-native": "0.73.3",
+    "typescript": "5.0.4",
+    "@types/react-native": "0.72.8"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
+  },
+  "codegenConfig": {
+    "name": "RNBrutalismSpecs",
+    "type": "components",
+    "jsSrcsDir": "src"
   }
+}
