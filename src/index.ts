@@ -1,4 +1,5 @@
-import BrutalismView from "./RNBrutalismViewNativeComponent";
-import BrutalismPressable from "./RNBrutalismPressableNativeComponent";
+import BrutalismView, {NativeProps} from "./RNBrutalismViewNativeComponent";
+import BrutalismPressable, {PressableProps} from "./RNBrutalismPressableNativeComponent";
 
-export { BrutalismView, BrutalismPressable };
+export type {NativeProps, PressableProps}
+export { BrutalismView, BrutalismPressable,  };

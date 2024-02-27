@@ -12,7 +12,7 @@ import com.facebook.react.viewmanagers.RNBrutalismViewManagerDelegate
 
 @ReactModule(name=BrutalismViewManager.NAME)
 class BrutalismViewManager(context: ReactApplicationContext): SimpleViewManager<BrutalismView>(), RNBrutalismViewManagerInterface<BrutalismView> {
-    private val delegate: RNBrutalismViewManagerDelegate<BrutalismView> = RNBrutalismViewManagerDelegate(this)
+    private val delegate: RNBrutalismViewManagerDelegate<BrutalismView, BrutalismViewManager> = RNBrutalismViewManagerDelegate(this)
 
     override fun getDelegate(): ViewManagerDelegate<BrutalismView> = delegate
 
@@ -23,7 +23,7 @@ class BrutalismViewManager(context: ReactApplicationContext): SimpleViewManager<
     @ReactProp(name = "x", defaultInt = 4) 
     override fun setX (view: BrutalismView, x: Int) {
         if(view != null) {
-            view.setX(x)
+            view.setOffsetX(x)
         }
         // view.background = BrutalistBackgroundDrawable(context).setPositionX(x)
     }
@@ -31,7 +31,7 @@ class BrutalismViewManager(context: ReactApplicationContext): SimpleViewManager<
     @ReactProp(name = "y", defaultInt = 4) 
     override fun setY (view: BrutalismView, y: Int) {
         if(view != null) {
-            view.setY(y)
+            view.setOffsetY(y)
         }
         // view.background = BrutalistBackgroundDrawable(context).setPositionY(y)
     }

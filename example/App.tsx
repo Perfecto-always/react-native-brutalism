@@ -16,7 +16,7 @@ import {
 } from 'react-native';
 
 import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-import {BrutalismView} from 'react-native-brutalism/src/index';
+import {BrutalismView} from 'react-native-brutalism';
 
 // type SectionProps = PropsWithChildren<{
 //   title: string;
