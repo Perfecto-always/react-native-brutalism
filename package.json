@@ -1,6 +1,6 @@
 {
   "name": "react-native-brutalism",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Brutalism inspired library",
   "react-native": "src/index",
   "source": "src/index",
