@@ -6,17 +6,20 @@
  * @format
  */
 
-import React from 'react';
+import React from "react";
 import {
   SafeAreaView,
   ScrollView,
   StatusBar,
+  StyleSheet,
+  Text,
+  View,
   // StyleSheet,
   useColorScheme,
-} from 'react-native';
+} from "react-native";
 
-import {Colors, Header} from 'react-native/Libraries/NewAppScreen';
-import {BrutalismView} from 'react-native-brutalism';
+import { Colors, Header } from "react-native/Libraries/NewAppScreen";
+import { BrutalismView } from "react-native-brutalism";
 
 // type SectionProps = PropsWithChildren<{
 //   title: string;
@@ -49,45 +52,25 @@ import {BrutalismView} from 'react-native-brutalism';
 // }
 
 function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
   return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <BrutalismView x={4} y={4} />
-      </ScrollView>
-    </SafeAreaView>
+    <View style={styles.container}>
+      {/* <Header /> */}
+      <Text>Hello</Text>
+      <BrutalismView
+        x={100}
+        y={100}
+        style={{ width: 100, height: 10 }}
+      ></BrutalismView>
+    </View>
   );
 }
 
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
 export default App;

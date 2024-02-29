@@ -16,7 +16,9 @@ class BrutalismViewManager(context: ReactApplicationContext): SimpleViewManager<
 
     override fun getDelegate(): ViewManagerDelegate<BrutalismView> = delegate
 
-    override fun getName(): String = NAME
+    override fun getName(): String {
+        return NAME
+    }
 
     override fun createViewInstance(context: ThemedReactContext): BrutalismView = BrutalismView(context)
 

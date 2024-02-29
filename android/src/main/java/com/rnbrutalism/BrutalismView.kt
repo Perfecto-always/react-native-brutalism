@@ -8,6 +8,7 @@ import android.graphics.drawable.Drawable
 import android.graphics.Paint
 import android.graphics.Rect
 import android.graphics.Canvas
+import android.graphics.drawable.GradientDrawable
 
 class BrutalismView(context: Context) : View(context) {
 
@@ -18,10 +19,12 @@ class BrutalismView(context: Context) : View(context) {
     private val paint = Paint().apply {
         color = DEFAULT_COLOR
         style = Paint.Style.FILL
+        setShadowLayer(0.01f, offsetX.toFloat(), offsetY.toFloat(), Color.BLACK)
     }
 
     private var offsetX: Int = 0
     private var offsetY: Int = 0
+    private var shadowColor: Int = Color.parseColor("#ffffff")
 
     fun setOffsetX(offsetX: Int) {
         this.offsetX = offsetX
@@ -29,16 +32,17 @@ class BrutalismView(context: Context) : View(context) {
     }
 
     fun setOffsetY(offsetY: Int) {
-        this.offsetX = offsetY
+        this.offsetY = offsetY
         invalidate()
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
+        // canvas.translate(offsetX.toFloat(), offsetY.toFloat()) // Apply offset
         canvas.drawRect(
-            offsetX.toFloat(), offsetY.toFloat(), width.toFloat() - offsetX, height.toFloat() - offsetY, paint
+            0f, 0f, width.toFloat(), height.toFloat(), paint
         )
-    }
+}
 }
 
 
