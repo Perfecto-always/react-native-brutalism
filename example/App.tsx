@@ -57,9 +57,9 @@ function App(): React.JSX.Element {
       {/* <Header /> */}
       <Text>Hello</Text>
       <BrutalismView
-        x={100}
-        y={100}
-        style={{ width: 100, height: 10 }}
+        x={10}
+        y={10}
+        style={{ width: 100, height: 100 }}
       ></BrutalismView>
     </View>
   );
