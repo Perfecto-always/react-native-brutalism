@@ -1,9 +1,14 @@
 {
   "name": "react-native-brutalism",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Brutalism inspired library",
   "react-native": "src/index",
+  "homepage": "https://github.com/Perfecto-always/react-native-brutalism.git",
   "source": "src/index",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Perfecto-always/react-native-brutalism.git"
+  },
   "files": [
     "js",
     "lib",
@@ -21,7 +26,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "brutalism"
   ],
   "devDependencies": {
     "react": "18.2.0",
