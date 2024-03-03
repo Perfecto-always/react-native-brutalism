@@ -7,7 +7,8 @@ export interface NativeProps extends ViewProps {
   x?: Int32;
   y?: Int32;
   roundness?: Int32;
-  // add other props here
+  bgColor: string;
+  viewBorderWidth?: Int32;
 }
 
 export default codegenNativeComponent<NativeProps>(
